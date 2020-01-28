@@ -1,0 +1,58 @@
+﻿<Window x:Class="final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:final"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Not Pad">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="367*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="insert your name and equatins:" HorizontalAlignment="Left" Margin="52,35,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="input_window" HorizontalAlignment="Left" Margin="52,79,0,0" Text="" AcceptsReturn="True" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="161" Grid.ColumnSpan="2"/>
+                    <Button x:Name="Add_bttn" Content="Add" HorizontalAlignment="Left" Margin="79,356,0,0" VerticalAlignment="Top" Width="60" Click="Add_bttn_Click" Grid.Column="1"/>
+                    <Button x:Name="Clr_bttn" Content="Clear" HorizontalAlignment="Left" Margin="154,356,0,0" VerticalAlignment="Top" Width="62" Click="Clr_bttn_Click" Grid.Column="1"/>
+                    <TextBox x:Name="x_anw_window" HorizontalAlignment="Left" Margin="115,275,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
+                    <TextBox x:Name="y_anw_window" HorizontalAlignment="Left" Margin="115,298,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Grid.Column="1"/>
+                    <Label Content="x:" HorizontalAlignment="Left" Margin="88,271,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="y:" HorizontalAlignment="Left" Margin="88,294,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Grid Grid.Column="1" Margin="455,35,60,203">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition Height="0*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Name="Clock" RenderTransformOrigin="0.272,0.594">
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Querise">
+                <Grid Background="#FFE5E5E5">
+                    <CheckBox x:Name="name_ali_check" Content="name is Ali" HorizontalAlignment="Left" Margin="122,72,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="yavari_lastName_check" Content="last name is Yavari" HorizontalAlignment="Left" Margin="122,132,0,0" VerticalAlignment="Top" Checked="yavari_lastName_check_Checked"/>
+                    <CheckBox x:Name="Tehran_check" Content="Tehran" HorizontalAlignment="Left" Margin="122,232,0,0" VerticalAlignment="Top" Checked="Tehran_check_Checked"/>
+                    <CheckBox x:Name="above_18" Content="Age above 18" HorizontalAlignment="Left" Margin="122,172,0,0" VerticalAlignment="Top" Checked="above_18_Checked"/>
+                    <CheckBox x:Name="young_18" Content="Young age 18" HorizontalAlignment="Left" Margin="122,152,0,0" VerticalAlignment="Top" Checked="young_18_Checked"/>
+                    <CheckBox x:Name="name_hossein_check" Content="name is Hossein" HorizontalAlignment="Left" Margin="122,92,0,0" VerticalAlignment="Top" Checked="name_hossein_check_Checked"/>
+                    <CheckBox x:Name="fadayi_lastName_check" Content="last name is Fadayi" HorizontalAlignment="Left" Margin="122,112,0,0" VerticalAlignment="Top" Checked="fadayi_lastName_check_Checked"/>
+                    <CheckBox x:Name="Mashhad_check" Content="Mashhad" HorizontalAlignment="Left" Margin="122,212,0,0" VerticalAlignment="Top" Checked="Mashhad_check_Checked"/>
+                    <CheckBox x:Name="above_50" Content="age abov 50" HorizontalAlignment="Left" Margin="122,191,0,0" VerticalAlignment="Top" Checked="above_50_Checked"/>
+                    <CheckBox x:Name="anw_15_20_check" Content="answers are x=15 , y=20" HorizontalAlignment="Left" Margin="122,252,0,0" VerticalAlignment="Top" Checked="anw_15_20_check_Checked"/>
+                    <CheckBox x:Name="eq1_check" Content="4x+5y=10" HorizontalAlignment="Left" Margin="122,272,0,0" VerticalAlignment="Top" Checked="eq1_check_Checked"/>
+                    <CheckBox x:Name="eq2_check" Content="15x+36y=80" HorizontalAlignment="Left" Margin="122,292,0,0" VerticalAlignment="Top" Checked="eq2_check_Checked"/>
+                    <TextBox x:Name="win_query" HorizontalAlignment="Left" Margin="294,0,0,0" Text="" AcceptsReturn="True" TextWrapping="Wrap" VerticalAlignment="Center" ScrollViewer.CanContentScroll="True" Width="314" Height="354"/>
+                    <Button x:Name="filter_bttn" Content="Filter" HorizontalAlignment="Left" Margin="122,38,0,0" VerticalAlignment="Top" Height="29" Width="93" Click="filter_bttn_Click"/>
+                    <Button x:Name="clr_bttn" Content="Clear" HorizontalAlignment="Left" Margin="220,38,0,0" VerticalAlignment="Top" Height="29" Width="69" Click="clr_bttn_Click_1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
